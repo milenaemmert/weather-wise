@@ -1,0 +1,14 @@
+@import url('./reset.css');
+@import url('./variables.css');
+@import url('./fonts.css');
+
+body {
+  height: 100vh;
+  font-family: var(--roboto-font);
+  color: var(--white);
+  background-image: url('../images/background.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: var(--default-padding);
+  
+}

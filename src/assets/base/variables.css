@@ -1,0 +1,9 @@
+:root {
+  --roboto-font: 'Roboto', sans-serif;
+  
+  --default-padding: 40px;
+  --default-gap: 24px;
+
+  --white: #FFFFFF;
+  --border: 2px solid #FFFFFF60;
+}

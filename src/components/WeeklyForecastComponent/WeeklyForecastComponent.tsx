@@ -12,7 +12,7 @@ export default function WeeklyForecastComponent() {
     const fetchData = async () => {
       setIsLoading(true)
       const response = await fetch('forecast.json')
-      await new Promise(resolve => setTimeout(resolve, 1000))
+      await new Promise(resolve => setTimeout(resolve, 100))
       const data = await response.json()
       setData(data)
       setIsLoading(false)
@@ -23,8 +23,8 @@ export default function WeeklyForecastComponent() {
 
   function renderForecast() {
     return (
-      <>
-        <h2>Location: {data?.location?.name}</h2>
+      <section className={s.weeklyForecastContainer}>
+        <h2 className={s.weeklyForecastContainer__location}>Location: {data?.location?.name}</h2>
         <p>Next 5 days forecast</p>
         <div className={s.daysContainer}>
           {data?.forecast?.forecastday.map((day) => {
@@ -33,7 +33,7 @@ export default function WeeklyForecastComponent() {
             )
           })}
         </div>
-      </>
+      </section>
     )
   }
 

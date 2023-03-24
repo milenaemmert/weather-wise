@@ -1,0 +1,14 @@
+.dayOfTheWeekContainer {
+  margin-left: 16px;
+  text-align: center;
+}
+
+.dayOfTheWeek__icon {
+  margin-bottom: 1rem;
+}
+
+.dayOfTheWeek__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}

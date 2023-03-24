@@ -1,0 +1,6 @@
+.mainScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--default-gap);
+}
