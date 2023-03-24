@@ -10,9 +10,9 @@ export default function DayOfTheWeekComponent({ data }) {
         <li>{data.date}</li>
         <li>Temperature: {data.day.avgtemp_c}</li>
         <li>Condition: {data.day.condition.text}</li>
-        <li>Humidity: {data.avghumidity}</li>
-        <li>Wind: {data.maxwind_kph}</li>
-        <li>Precipitation: {data.totalprecip_mm}</li>
+        <li>Humidity: {data.day.avghumidity}</li>
+        <li>Wind: {data.day.maxwind_kph}</li>
+        <li>Precipitation: {data.day.totalprecip_mm}</li>
       </ul>
     </div>
   )
