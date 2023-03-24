@@ -1,7 +1,7 @@
 // @ts-nocheck
 import DayOfTheWeekComponent from '../DayOfTheWeek/DayOfTheWeekComponent'
-
 import { useState, useEffect } from 'react'
+import Loading from '../Loading/LoadingComponent'
 import s from './WeeklyForecast.module.css'
 
 export default function WeeklyForecastComponent() {
@@ -12,7 +12,7 @@ export default function WeeklyForecastComponent() {
     const fetchData = async () => {
       setIsLoading(true)
       const response = await fetch('forecast.json')
-      await new Promise(resolve => setTimeout(resolve, 100))
+      await new Promise(resolve => setTimeout(resolve, 1000))
       const data = await response.json()
       setData(data)
       setIsLoading(false)
@@ -32,6 +32,7 @@ export default function WeeklyForecastComponent() {
               <DayOfTheWeekComponent key={day.date} data={day} />
             )
           })}
+          {isLoading && <Loading />}
         </div>
       </section>
     )
@@ -41,7 +42,7 @@ export default function WeeklyForecastComponent() {
   //criar um componente para o Loading...
   return (
     <section>
-      {isLoading ? <p>Loading...</p> : renderForecast()}
+      {isLoading ? <Loading /> : renderForecast()}
     </section>
   )
 }
