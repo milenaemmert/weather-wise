@@ -1,4 +1,6 @@
 // @ts-nocheck
+import { NavLink } from 'react-router-dom'
+import { HOURLY_ROUTE } from '../../contants/routes'
 import s from './DayOfTheWeek.module.css'
 
 export default function DayOfTheWeekComponent({ data }) {
@@ -14,6 +16,8 @@ export default function DayOfTheWeekComponent({ data }) {
         <li>Wind: {data.day.maxwind_kph}</li>
         <li>Precipitation: {data.day.totalprecip_mm}</li>
       </ul>
+
+      <NavLink className={s.navLink} to={HOURLY_ROUTE}>Hourly</NavLink>
     </div>
   )
 }
